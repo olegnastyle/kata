@@ -1,7 +1,11 @@
 // преобразуем в верхний регистр
-text.oninput = function () {
+// text.oninput = function () {
+//   this.value = this.value.toUpperCase();
+// };
+
+text.addEventListener('input', function () {
   this.value = this.value.toUpperCase();
-};
+}, false);
 
 
 coding.addEventListener('tachstart', () => {
