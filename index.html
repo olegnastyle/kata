@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/kata.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kata Academy</title>
+  </head>
+  <body>
+    <div id="app">
+      <main>
+        <h1>Кодирование строки</h1>
+        <textarea
+          title="Введите строку для шифрования"
+          id="text"
+          rows="5"
+          cols="40"
+        ></textarea>
+        <button title="Нажми, чтобы зашифровать" id="coding">Кодировать</button>
+      </main>
+      <footer>
+        <h2>Результат:</h2>
+        <button title="Нажми, чтобы скопировать" id="copy">
+          Скопировать в буфер обмена
+        </button>
+        <p class="success">Данные успешно скопированы!</p>
+      </footer>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
