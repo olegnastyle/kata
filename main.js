@@ -1,5 +1,3 @@
-import './style.css';
-
 // преобразуем в верхний регистр
 text.oninput = function () {
   this.value = this.value.toUpperCase();
@@ -26,30 +24,20 @@ coding.addEventListener('click', () => {
 
 // копирование шифра в буфер обмена
 copy.addEventListener('click', () => {
+  navigator.clipboard.writeText(text.value);
   const success = document.querySelector('.success');
 
-  navigator.clipboard.writeText(text.value);
-  success.style.opacity = '100%';
-  setTimeout(() => (success.style.opacity = ''), 3000);
+  if (text.value != '') {
+    success.style.opacity = '100%';
+    success.style.height = '100%';
+    success.style.transition = 'all .4s ease-in-out';
+    setTimeout(
+      () => (
+        (success.style.opacity = ''),
+        (success.style.height = ''),
+        (text.value = '')
+      ),
+      3000
+    );
+  }
 });
-
-// let result = value.split('')
-//     .map(function(item, index, arr) {
-//         //console.log(item, arr[index+1], item == arr[index+1])
-//         let count = 1
-//         for(let key of arr){
-//             if(key === arr[index+1]){
-//                 count++
-//             } else {
-//                 return count == 1 ? `${key}` : `${count}${item}`
-//             }
-//             count = 1
-//         }
-//     }).join('')
-
-// console.log(result)
-//console.log('R' === undefined)
-
-// for(let key of result) {
-//     console.log(key)
-// }
